@@ -38,6 +38,9 @@ const Inicio = () => {
                         <p className="bike">TU BICI, TU MUNDO</p>
                     </div>
                     <img src="/img/fondo-imagen.png" alt="" />
+                    
+                    <Link to="/categoria/detalles" className="btn-catalogo">VER CATÁLOGO</Link>   
+                    
                 </section>
 
                 <section className="Backimg">
@@ -152,9 +155,7 @@ const Inicio = () => {
                             )}
                     </div>
 
-                    <div className="btn">
-                        <Link to="/categoria/detalles" className="btn-catalogo">VER CATÁLOGO</Link>   
-                    </div>
+                    
                     
                     
                 </article>
