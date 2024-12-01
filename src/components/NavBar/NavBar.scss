@@ -4,8 +4,9 @@
 .navbar{
     position: fixed !important;
     top: 0;
+    padding: 0px !important;
     z-index: 1000;
-    height: 9vh;
+    height: 8vh;
     width: 100%;
     background: #fff;
     color: aliceblue;
@@ -22,8 +23,7 @@
     justify-content: space-between;
     
 }.logo{
-    width: 120px;
-    
+    width: 110px;
 }
 
 
@@ -34,15 +34,14 @@
     text-align: center;
     width: 75vw;
     justify-content: flex-end;
-    margin-right: 1rem;
+    
 }
 
 
 .nav-link{
     display: flex;
     align-items: center;
-    padding: 10px;
-    font-size: 1.1rem;
+    font-size: 0.5rem;
     font-weight: 700;
 } 
 .nav-link a{
@@ -54,7 +53,7 @@
 }.nav-link a:hover{
     transition: 0.2s;
     background: #7f040ad8;
-    color: #ffffffbb;
+    color: white;
 }
 
 
@@ -63,7 +62,7 @@
 
 .submenu{
     position: absolute;
-    top: 65px;
+    top: 53px;
     margin-left: -46px;
     background: #fff;
     z-index: 1;

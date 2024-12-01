@@ -37,13 +37,15 @@ const Inicio = () => {
                         <h1 className="ciclova">CICLOVA</h1>
                         <p className="bike">TU BICI, TU MUNDO</p>
                     </div>
+                    <Link to="/categoria/detalles" className="btn-catalogo">Ver catálogo</Link> 
                     <img src="/img/fondo-imagen.png" alt="" />
-                    
-                    <Link to="/categoria/detalles" className="btn-catalogo">VER CATÁLOGO</Link>   
-                    
+                    <a href="#section1" className="slid">v</a>
                 </section>
 
-                <section className="Backimg">
+
+
+
+                <section className="Backimg" id="section1">
                     <div >
                         {/* Carousel */}
                         <div id="carouselExampleRide" className="carousel slide" data-bs-ride="carousel">
