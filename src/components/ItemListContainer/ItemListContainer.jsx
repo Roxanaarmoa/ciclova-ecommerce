@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import ItemList from "../ItemList/ItemList";
 
 import { useParams } from "react-router-dom";
-import { MoonLoader } from "react-spinners";
+import { DotLoader, MoonLoader } from "react-spinners";
 import { collection, getDocs, query, where } from  "firebase/firestore"; // database-firebase  { colleccion,traer documentos,referencia a consulta, filtra la data }
 
 import db from "../../db/db";
@@ -12,7 +12,7 @@ import db from "../../db/db";
 
 
 const ItemListContainer = () => {
-    
+
 
     const [products, setProductos] = useState([]);
     
@@ -52,7 +52,10 @@ return (
     {
         cargando ? (
             <div className="cargando">
-                <MoonLoader color="black"/>
+                <DotLoader
+                color="rgba(128, 0, 0, 0.88)"
+                size={60}
+                />
             </div>
         )//si está cargando = mostrar pantalla de carga(ternarios)
         :(<div>
@@ -60,7 +63,6 @@ return (
         </div>)//si no está cargando= mostrar directamente productos
     }
     </>
-    
 );
 };
 

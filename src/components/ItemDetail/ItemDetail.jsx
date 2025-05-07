@@ -24,12 +24,13 @@ const ItemDetail = ({ product }) => {
     }
 
     return(
-        <div className="product-detail">
-            <img src={product.thumbnail} alt={product.title} />
-            <div>
-                <h2>{product.title}</h2>
+        <div className="bg">
+            <div className="product-detail">
+                <img className="imgdetail" src={product.thumbnail} alt={product.title} />
+            <div >
+                <h2 className="titledetail">{product.title}<b className="bold">|</b></h2>
                 <p className="description">{product.description}</p>
-                <p>${product.price}</p>
+                <p className="price">${product.price}</p>
                 {
                     toggle ? (
                         <div className="terminar-compra">
@@ -46,6 +47,7 @@ const ItemDetail = ({ product }) => {
                         agregarAlCarrito={agregarAlCarrito}
                         />
                     )}
+                </div>
             </div>
         </div>
     );//en itemcount se envia por data.js

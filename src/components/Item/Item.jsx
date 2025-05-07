@@ -8,7 +8,7 @@ import "./Item.scss"
 const Item = React.memo(({product}) =>{
     return(
         <section className="products-container">
-            <img src={product.thumbnail} alt={product.title} />
+            <img className="imgsvg"src={product.thumbnail} alt={product.title} />
             <p>{product.title}</p>
             <p>${product.price}</p>
             <Link to={`/detalle/${product.id}`}className="link"> Ver Detalles </Link>

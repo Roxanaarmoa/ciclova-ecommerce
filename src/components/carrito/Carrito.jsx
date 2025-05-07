@@ -17,7 +17,7 @@ const Carrito = () => {
     }
 
     return (
-    <div >
+    <div className="margin">
         <ul className="article">
             {
                 carrito.map((product) => (

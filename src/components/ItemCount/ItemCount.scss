@@ -1,15 +1,23 @@
-
-.controls{
-    gap: 10px;
+.item-count{
     display: flex;
-    font-size: 14px;
+    width: 222px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-inline: 45px;
+}
+.controls{
+    gap: 4px;
+    display: flex;
 }.controls button{
     height: 40px;
-    padding: 10px;
+    padding: 8px;
     color: aliceblue;
     background-color: rgba(0, 0, 0, 0.74);
     border-style: none;
     border-radius: 5px;
+}.controls p{
+    position: relative;
+    top: 8px;
 }
 
 .agregarAlCarrito{

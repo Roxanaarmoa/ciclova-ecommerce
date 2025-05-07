@@ -3,6 +3,7 @@ import CartWidget from "./CartWidget"
 import { Link } from "react-router-dom"
 
 
+
 import "./NavBar.scss"
 
 
@@ -10,8 +11,22 @@ import "./NavBar.scss"
 const NavBar = () =>{
     
 
-    const [subMenuVisible, setSubMenuVisible] = useState(false);
+    const [subMenuVisible, setSubMenuVisible] = useState(false); //submenú
+    const [isNavbarHovered, setNavbarHovered] = useState(false); //color del navbar
     
+    
+    //Función para cambiar el color del navbar al pasar el mouse
+    const handleNavbarMouseEnter = () => {
+        setNavbarHovered(true);
+    };
+
+    // Función para restaurar el color del navbar al retirar el mouse
+    const handleNavbarMouseLeave = () => {
+        setNavbarHovered(false);
+    };
+
+
+
     // Función para mostrar el submenú cuando se pasa el mouse por encima del enlace
     const handleMouseEnter = () => {
         setSubMenuVisible(true);
@@ -24,7 +39,10 @@ const NavBar = () =>{
 
     return(
         
-        <header className="navbar">
+        <header className={`navbar ${isNavbarHovered ? "navbar-hovered" : "nav-hovered"}`} // Clase dinámica
+        onMouseEnter={handleNavbarMouseEnter}
+        onMouseLeave={handleNavbarMouseLeave}>
+            
 
             <div className="nav-logo">
                 <Link to="/" >
