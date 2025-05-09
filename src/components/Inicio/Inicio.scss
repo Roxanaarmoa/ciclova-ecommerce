@@ -346,16 +346,27 @@
         display: block;
     }
 
+
+
     .card-content {
         flex-direction: column;
         padding: 36px;
-    }
-
-    .card-content img {
+    }.card-content img {
         width: 90%;
         margin: 0 auto;
     }
-
+    @keyframes slide-in-left {
+        from {
+        transform: translateX(100%);
+        opacity: 0;
+        }
+        to {
+        transform: translateX(0);
+        opacity: 1;
+        }
+    }.animate-left {
+        animation: slide-in-left 0.8s ease forwards;
+    }
     .first-title,
     .second-title {
         font-size: 20px;
