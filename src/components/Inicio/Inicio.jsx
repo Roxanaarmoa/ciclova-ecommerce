@@ -43,11 +43,20 @@ const Inicio = () => {
 
                 {/* Branding */}
                 <section className="brand" id="section1">
-                    <img className="brand-img" src="img/brand-cube.png" alt="" />
-                    <img className="brand-img" src="img/brand-merida.png" alt="" />
-                    <img className="brand-img" src="img/brand-venzo.png" alt="" />
-                    <img className="brand-img" src="img/brand-topmega.png" alt="" />
-                    <img className="brand-img" src="img/brand-trek.png" alt="" />
+                <div className="brand-track">
+                    <img className="brand-img" src="img/brand-cube.png" alt="Cube" />
+                    <img className="brand-img" src="img/brand-merida.png" alt="Merida" />
+                    <img className="brand-img" src="img/brand-venzo.png" alt="Venzo" />
+                    <img className="brand-img" src="img/brand-topmega.png" alt="TopMega" />
+                    <img className="brand-img" src="img/brand-trek.png" alt="Trek" />
+
+                    {/* Duplico para el loop */}
+                    <img className="brand-img" src="img/brand-cube.png" alt="Cube" />
+                    <img className="brand-img" src="img/brand-merida.png" alt="Merida" />
+                    <img className="brand-img" src="img/brand-venzo.png" alt="Venzo" />
+                    <img className="brand-img" src="img/brand-topmega.png" alt="TopMega" />
+                    <img className="brand-img" src="img/brand-trek.png" alt="Trek" />
+                </div>
                 </section>
 
 
