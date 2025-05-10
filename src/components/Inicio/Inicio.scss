@@ -332,22 +332,6 @@
         padding: 8px 16px;
     }
 
-    .btn-ver-mas {
-        top: 90%;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 16px;
-        padding: 10px 20px;
-    }
-
-    .brand-img {
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-    }
-
-
-
     .card-content {
         flex-direction: column;
         padding: 36px;
@@ -355,28 +339,8 @@
         width: 90%;
         margin: 0 auto;
     }
-    @keyframes slide-in-left {
-        from {
-        transform: translateX(100%);
-        opacity: 0;
-        }
-        to {
-        transform: translateX(0);
-        opacity: 1;
-        }
-    }.animate-left {
-        animation: slide-in-left 0.8s ease forwards;
-    }
-    .first-title,
-    .second-title {
-        font-size: 20px;
-        top: 0;
-        left: 0;
-        right: 0;
-        position: static;
-        margin-top: 20px;
-        justify-content: center;
-    }
+    
+    
 
     .article-content {
         display: none;

@@ -27,32 +27,6 @@ const Inicio = () => {
     }, []);
 
 
-
-    //cards
-    useEffect(() => {
-        const cards = document.querySelectorAll('.card-content a');
-            const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-left');
-                } else {
-                    entry.target.classList.remove('animate-left'); // para que se repita al volver
-                }
-                });
-            },
-            {
-                threshold: 0.3,
-            }
-            );
-        
-            cards.forEach(card => observer.observe(card));
-        
-            return () => {
-            cards.forEach(card => observer.unobserve(card));
-            };
-        }, []);
-
         
 
     return (
