@@ -23,7 +23,7 @@
     color: white;
     position: absolute;
     top: 350px;
-    left: 700px;
+    left: 680px;
 }
 .ciclova{
     font-size: 100px;
@@ -46,9 +46,9 @@
 .slid{
     position: absolute;
     text-decoration: none;
-    top: 850px;
-    left: 980px;
-    font-size: 50px;
+    top: 760px;
+    left: 898px;
+    font-size: 41px;
     color: #ffffff;
     
     animation: pulse 1.5s infinite;
@@ -67,7 +67,7 @@
     font-weight: 400;
     padding: 10px;
     top:540px;
-    left: 900px;
+    left: 850px;
     border-style: solid;
     border-radius: 30px;
 }.btn-catalogo:hover{
@@ -346,4 +346,6 @@
     .article-content {
         display: none;
     }
+
+    
 }

@@ -27,7 +27,7 @@ const ItemDetail = ({ product }) => {
         <div className="bg">
             <div className="product-detail">
                 <img className="imgdetail" src={product.thumbnail} alt={product.title} />
-            <div >
+            <div className="detail">
                 <h2 className="titledetail">{product.title}<b className="bold">|</b></h2>
                 <p className="description">{product.description}</p>
                 <p className="price">${product.price}</p>
@@ -48,6 +48,9 @@ const ItemDetail = ({ product }) => {
                         />
                     )}
                 </div>
+            </div>
+            <div>
+                <Link className="volver" to="/categorias/mountain"> volver</Link>
             </div>
         </div>
     );//en itemcount se envia por data.js

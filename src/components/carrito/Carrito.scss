@@ -126,3 +126,18 @@ transition: 0.3s;
 }
 }
 }
+
+
+@media screen and (max-width: 430px) {
+    .margin{
+        margin-top: 74px;
+        padding: 18px;
+    }
+    .article-products .product-title, p{
+        font-size: 12px;
+        padding: 5px;
+    }
+    .total h3{
+        font-size: 15px;
+    }
+}

@@ -6,3 +6,14 @@
     gap: 20px;
     margin-top: 20px;
 }
+@media screen and  (max-width: 430px){
+    .item-lists{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 105px;
+        padding: 0px;
+    }
+    
+}
