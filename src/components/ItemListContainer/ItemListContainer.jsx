@@ -21,32 +21,39 @@ const ItemListContainer = () => {
     const { categoria } = useParams();
 
 
-
-    useEffect(() => {
+//productos
+    useEffect( () => {
+        const obtenerProductos = async () => {
         setCargando(true)
         
-        //categorias
-        let consulta
-        const productosReferidos = collection(db,"products") //base de datos/database
-        
-        if (categoria){
-            consulta = query(productosReferidos, where("categoria","==",categoria)) //sirve para hacer categorias de consultas. mayor a 15.000, menor a
-        }else{
-            consulta = productosReferidos
-        }//filtrado de data
-    
-        //trae todos los documentos/productos
-        getDocs(consulta)
-            .then((respuesta) => {
-            let productsDb = respuesta.docs.map((product) => {
-                return { id: product.id, ...product.data() }
-                });
-                setProductos(productsDb)
-            })
-            .catch((error)=> console.log(error))
-            .finally(()=> setCargando(false))
-}, [categoria]);
+        try{
+            //categorias
+            let consulta
+            const productosReferidos = collection(db,"products") //base de datos/database
 
+            if (categoria){
+                consulta = query(productosReferidos, where("categoria","==",categoria)
+            ) //si hay categoria, filtrar por categoria, tambien sirve para hacer categorias de consultas. mayor a 15.000, menor a
+            } else {
+                consulta = productosReferidos
+        }//filtrado de data
+
+        const respuesta = await getDocs(consulta)
+        const productsDb = respuesta.docs.map(product => ({
+            id: product.id, 
+            ...product.data() 
+            }))
+
+        setProductos(productsDb)
+
+        } catch(error){
+            console.log(error)}
+        finally{
+            setCargando(false)
+        }
+        }
+    obtenerProductos()
+}, [categoria]);
 return (
     <>
     {
@@ -64,6 +71,8 @@ return (
     }
     </>
 );
-};
+
+}//trae todos los documentos/productos
+
 
 export default ItemListContainer

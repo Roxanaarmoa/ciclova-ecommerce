@@ -31,11 +31,11 @@ const Carrito = () => {
             ))}
         </ul>
         <div className="total">
-        <h3>Total: {totalPrecio()}</h3>
-        <button onClick={borrarCarrito}>Vaciar carrito </button>
-        <Link to="/Checkout">
-            <h4>Continuar con mi compra</h4>
-        </Link>
+            <h3>Total: {totalPrecio()}</h3>
+            <button onClick={borrarCarrito}>Vaciar carrito </button>
+            <Link to="/Checkout">
+                <h4>Continuar con mi compra</h4>
+            </Link>
         </div>
         
     </div>

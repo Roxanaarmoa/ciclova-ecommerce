@@ -38,14 +38,17 @@ const Checkout = () => {
         subirOrden(orden);
     }
 
-    const subirOrden = (orden) => {
+    const subirOrden = async (orden) => {
         const ordenesRef = collection(db, "ordenes") //se crea en la base de datos
-        addDoc(ordenesRef, orden)
-        .then((respuesta) => {
+
+        try {
+            const respuesta = await addDoc(ordenesRef, orden);
             setIdOrden(respuesta.id)
             //limpia el carrito
             borrarCarrito()
-        });
+        } catch (error) {
+            console.log("Error al guardar la orden", error);
+        }
     };
 
     return (

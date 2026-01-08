@@ -11,23 +11,26 @@ const Inicio = () => {
     const [productos, setProductos] = useState([]);  
     const [cargando, setCargando] = useState(true);  
 
-    useEffect(() => {
+    useEffect(() =>  {
+        const obtenerProductosReferidos = async () => {
+
         const productosReferidos = collection(db, "products");
 
-        getDocs(productosReferidos)
-            .then((snapshot) => {
-                const productosDb = snapshot.docs.map((doc) => ({
-                    id: doc.id,
-                    ...doc.data(),  // Traemos toda la data del producto
-                }));
-                setProductos(productosDb); 
-            })
-            .catch((error) => console.log(error))
-            .finally(() => setCargando(false));  // Terminamos la carga
-    }, []);
-
-
-        
+        try {
+            const respuesta = await getDocs(productosReferidos);
+            const productosDb = respuesta.docs.map((doc) => ({
+                id: doc.id,
+                ...doc.data(),  // Traemos toda la data del producto
+            }));
+            setProductos(productosDb); 
+            setCargando(false);
+        } catch (error) {
+            console.log(error);
+            setCargando(false);
+        }
+    };
+    obtenerProductosReferidos()
+},[]);
 
     return (
         <main >
